@@ -1,0 +1,18 @@
+[Unit]
+Description=iDRAC hunter bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=hunter
+WorkingDirectory=/opt/idrac-hunter
+Environment=DISCORD_TOKEN=your_token
+ExecStart=/opt/idrac-hunter/venv/bin/python bot.py
+Restart=always
+RestartSec=15
+TimeoutStopSec=45
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
