@@ -1,0 +1,37 @@
+bot_token: "PASTE_TOKEN"
+guild_id: 0
+
+db_path: data/idrac.db
+export_dir: data/exports
+log_file: data/idrac.log
+log_level: INFO
+log_json: false
+
+subnets_file: subnets.txt
+datacenters_file: datacenter_subnets.txt
+use_datacenters: false
+asns_file: asns.txt
+use_asn_harvest: false
+
+default_mode: normal
+default_ports: [443, 80, 8443, 5900, 5901, 623]
+default_gens: [6, 7, 8, 9]
+default_feed_level: all
+default_notify_min: likely
+
+source_interval_hours: 6
+source_result_limit: 500
+rescan_alive_hours: 168
+rescan_dead_hours: 720
+rescan_vuln_hours: 24
+watch_interval_minutes: 180
+cycle_interval: 600
+cycle_jitter: 180
+
+# optional proxy pool, one per line: http://user:pass@host:port
+proxy_file: ""
+
+brand_color: 0x007DB8
+vuln_color: 0xED4245
+ok_color: 0x57F287
+warn_color: 0xFEE75C
